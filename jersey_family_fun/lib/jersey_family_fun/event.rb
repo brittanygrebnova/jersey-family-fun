@@ -3,10 +3,10 @@ class JerseyFamilyFun::Event
   attr_accessor :title, :location, :date_and_time, :url
   
   def self.today
-    puts <<-DOC.gsub /^\s*/, ''
-    1. Touch-a-Truck in Ridgewood - Memorial Park at Van Neste Square - Thursday 05/17/2018 09:00 AM
-    2. Raise the Roof - Museum of Early Trades & Crafts - Thursday 05/17/2018 4:00 PM
-    DOC
+    # puts <<-DOC.gsub /^\s*/, ''
+    # 1. Touch-a-Truck in Ridgewood - Memorial Park at Van Neste Square - Thursday 05/17/2018 09:00 AM
+    # 2. Raise the Roof - Museum of Early Trades & Crafts - Thursday 05/17/2018 4:00 PM
+    # DOC
     
     event_1 = self.new
     event_1.title = "Touch-a-Truck in Ridgewood"

@@ -10,6 +10,9 @@ class JerseyFamilyFun::CLI
     #list the events in numbered order from mommypoppins
     puts "Welcome to Jersey Family Fun! Here is a list of today's events:"
     @events = JerseyFamilyFun::Event.today
+    @events.each do |event|
+      puts event.title
+    end
   end
   
   def menu

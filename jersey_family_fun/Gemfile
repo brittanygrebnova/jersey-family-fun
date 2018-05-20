@@ -2,9 +2,6 @@ source "https://rubygems.org"
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
-```ruby
-gem 'jersey_family_fun'
-```
 
 # Specify your gem's dependencies in jersey_family_fun.gemspec
 gemspec
