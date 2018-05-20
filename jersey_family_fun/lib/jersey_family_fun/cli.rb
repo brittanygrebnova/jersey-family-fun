@@ -10,8 +10,8 @@ class JerseyFamilyFun::CLI
     #list the events in numbered order from mommypoppins
     puts "Welcome to Jersey Family Fun! Here is a list of today's events:"
     @events = JerseyFamilyFun::Event.today
-    @events.each do |event|
-      puts event.title
+    @events.each.with_index(1) do |event, index|
+      puts "#{index}. #{event}"
     end
   end
   
@@ -20,12 +20,10 @@ class JerseyFamilyFun::CLI
     while input != 'exit'
       puts "Enter the number of the event you'd like more information about, or 'list' to see today's list of events, or 'exit'"
       input = gets.strip.downcase
-      case input
-      when "1"
-        puts "More info on event 1..."
-      when "2"
-        puts "More info on event 2..."
-      when "list"
+      
+      if input.to_i > 0
+        @events[input.to_i - 1]
+      elsif input == "list"
         list_events
       else
         puts "Please enter the number of the event you want to learn more about, 'list', or 'exit'"
