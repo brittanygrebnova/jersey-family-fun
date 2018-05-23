@@ -11,7 +11,7 @@ class JerseyFamilyFun::CLI
     puts "Welcome to Jersey Family Fun! Here is a list of today's events:"
     @events = JerseyFamilyFun::Event.today
     @events.each.with_index(1) do |event, index|
-      puts "#{index}. #{event.title} - #{event.location} - #{event.date_and_time} - #{event.url}"
+      puts "#{index}. #{event.title_and_location} - #{event.date_and_time} - #{event.url}"
     end
   end
   
@@ -23,7 +23,7 @@ class JerseyFamilyFun::CLI
       
       if input.to_i > 0
         event_chosen = @events[input.to_i - 1]
-        puts "#{event_chosen.title} - #{event_chosen.location} - #{event_chosen.date_and_time} - #{event_chosen.url}"
+        puts "#{event_chosen.title_and_location} - #{event_chosen.date_and_time} - #{event_chosen.url}"
       elsif input == "list"
         list_events
       else
