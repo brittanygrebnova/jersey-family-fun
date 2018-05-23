@@ -10,16 +10,16 @@ class JerseyFamilyFun::CLI
     #list the events in numbered order from njkids
     puts "Welcome to Jersey Family Fun! Here is a list of today's events:"
     @events = JerseyFamilyFun::Event.today
-    @events.each.with_index do |index, event|
-      puts "#{index + 1}. #{event.title_and_location} - #{event.date_and_time} - #{event.url}"
-      binding.pry
+    @events.each.with_index(1) do |event, index|
+      puts "#{index}. #{event.title_and_location} - #{event.date_and_time} - #{event.url}"
+      #binding.pry
     end
   end
   
   def menu
     input = nil
     while input != 'exit'
-      puts "Enter the number of the event you'd like more information about, or 'list' to see today's list of events, or 'exit'"
+      puts "Enter the number of the event you'd like more information about, or 'list' to see today's list of events, or 'exit':"
       input = gets.strip.downcase
       
       if input.to_i > 0
