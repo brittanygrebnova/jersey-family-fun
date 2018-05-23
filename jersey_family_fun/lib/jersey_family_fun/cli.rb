@@ -7,11 +7,12 @@ class JerseyFamilyFun::CLI
   end
   
   def list_events
-    #list the events in numbered order from mommypoppins
+    #list the events in numbered order from njkids
     puts "Welcome to Jersey Family Fun! Here is a list of today's events:"
     @events = JerseyFamilyFun::Event.today
-    @events.each.with_index(1) do |event, index|
-      puts "#{index}. #{event.title_and_location} - #{event.date_and_time} - #{event.url}"
+    @events.each.with_index do |index, event|
+      puts "#{index + 1}. #{event.title_and_location} - #{event.date_and_time} - #{event.url}"
+      binding.pry
     end
   end
   
