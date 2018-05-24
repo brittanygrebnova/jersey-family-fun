@@ -1,8 +1,6 @@
 # JerseyFamilyFun
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/jersey_family_fun`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome! JerseyFamilyFun is a CLI data gem I created to bring the user a list of family-oriented events happening daily in the state of New Jersey!
 
 ## Installation
 
@@ -22,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+After installing JerseyFamilyFun, execute the program by running ./bin/jersey_family_fun. You will then be greeted, and provided with a list of the day's family events happening in New Jersey. Choose the number of the event that interests you, and you will then be given the rest of the event details.
 
 ## Development
 

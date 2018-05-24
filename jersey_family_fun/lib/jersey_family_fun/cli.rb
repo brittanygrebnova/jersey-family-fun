@@ -11,7 +11,7 @@ class JerseyFamilyFun::CLI
     puts "Welcome to Jersey Family Fun! Here is a list of today's events:"
     @events = JerseyFamilyFun::Event.today
     @events.each.with_index(1) do |event, index|
-      puts "#{index}. #{event.title_and_location} - #{event.date_and_time} - #{event.url}"
+      puts "#{index}. #{event.title_and_location}"
       #binding.pry
     end
   end
