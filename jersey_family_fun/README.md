@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-After installing JerseyFamilyFun, execute the program by running ./bin/jersey_family_fun. You will then be greeted, and provided with a list of the day's family events happening in New Jersey. Choose the number of the event that interests you, and you will then be given the rest of the event details.
+After installing JerseyFamilyFun, execute the program by running ./bin/jersey_family_fun. You will then be greeted and provided with a list of the day's family events happening in New Jersey. Choose the number of the event that interests you, and you will then be given the rest of the event details.
 
 ## Development
 
