@@ -8,16 +8,14 @@ class JerseyFamilyFun::Event
   
   def self.scrape_events
     doc = Nokogiri::HTML(open("https://www.njkidsonline.com/events"))
-    events = []
-    doc.css("div.ListingItem").each do |listed_event|
+    doc.css("div.ListingItem").collect do |listed_event|
       event = self.new
       event.title_and_location = listed_event.css("h3").text.strip
       event.date_and_time = listed_event.css(".FieldRow").text.gsub("Date", "").strip
-      event.url = listed_event.css("a").attribute('href').value
+      event.url = "www.njkidsonline.com#{listed_event.css("a").attribute('href').value}"
       #binding.pry
-      events << event
+      event
     end
-    events
   end
   
 end
