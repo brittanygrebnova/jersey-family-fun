@@ -1,3 +1,5 @@
+require 'launchy'
+
 class JerseyFamilyFun::CLI
 
   def call
@@ -10,7 +12,9 @@ class JerseyFamilyFun::CLI
     puts "Welcome to Jersey Family Fun! Here is a list of today's events:"
     @events = JerseyFamilyFun::Event.today
     @events.each.with_index(1) do |event, index|
-      puts "#{index}. #{event.title_and_location} - #{event.date_and_time} - #{event.url}"
+      if event.title_and_location != "" && event.url != 'www.njkidsonline.com'
+        puts "#{index}. #{event.title_and_location} - #{event.date_and_time} - #{event.url}"
+      end
     end
   end
 
@@ -21,7 +25,7 @@ class JerseyFamilyFun::CLI
       input = gets.strip.downcase
 
       if input.to_i > 0 && input.to_i <= @events.size
-        system("open #{@events[input.to_i - 1].url}")
+        Launchy.open("#{@events[input.to_i - 1].url}")
       elsif input == "list"
         list_events
       else
