@@ -1,6 +1,6 @@
 # JerseyFamilyFun
 
-Jersey Family Fun is a Ruby CLI gem that scrapes www.njkidsonline.com to users with a list of family-oriented events that are happening in New Jersey on that particular day. You will be greeted, then provided with a list of statewide events that will include the title, description, and a link to more event details. You should then be able to read through the list, choose to get more information about any of the events listed, and exit when you wish.
+JerseyFamilyFun is a Ruby CLI gem that scrapes www.njkidsonline.com to users with a list of family-oriented events that are happening in New Jersey on that particular day. You will be greeted, then provided with a list of statewide events that will include the title, description, and a link to more event details. You should then be able to read through the list, choose to get more information about any of the events listed, and exit when you wish.
 
 ## Installation
 
